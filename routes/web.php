@@ -49,3 +49,10 @@ Route::get('/set', [App\Http\Controllers\TestController::class, 'set']);
 Route::get('/get', [App\Http\Controllers\TestController::class, 'get']);
 Route::get('/model', [App\Http\Controllers\TestController::class, 'model']);
 
+
+
+
+//vue
+
+Route::get('/start', [\App\Http\Controllers\StartController::class, 'index']);
+

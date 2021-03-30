@@ -20,6 +20,8 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//регистрируем компонент после подключения кода Vue и до создания экземпляра
+Vue.component('prop-component', require('./components/PropComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
