@@ -23,6 +23,7 @@
 
 <script>
     export default {
+        //передаем входные параметры через html-атрибуты элемента
         props: [
             'urldata'
         ],

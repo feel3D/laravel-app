@@ -2,6 +2,9 @@
 
 @section('content')
 
-    <prop-component :urldata="{{json_encode($url)}}"></prop-component>
+{{--    <prop-component :urldata="{{json_encode($url)}}"></prop-component>--}}
+
+{{--    <ajax-component></ajax-component>--}}
+    <chartline-component></chartline-component>
 @endsection
 

@@ -53,6 +53,11 @@ Route::get('/model', [App\Http\Controllers\TestController::class, 'model']);
 
 
 //vue
-
 Route::get('/start', [\App\Http\Controllers\StartController::class, 'index']);
+//ajax
+Route::get('/start/get-json', [\App\Http\Controllers\StartController::class, 'getJson']);
+//chart js
+Route::get('/start/data-chart', [\App\Http\Controllers\StartController::class, 'chartData']);
+
+
 
