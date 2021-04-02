@@ -1920,6 +1920,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -75804,7 +75805,13 @@ var render = function() {
               height: 100,
               options: { responsive: true, maintainAspectRatio: true }
             }
-          })
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", on: { click: _vm.update } },
+            [_vm._v("Обновить")]
+          )
         ],
         1
       )

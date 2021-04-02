@@ -50,7 +50,12 @@ class StartController extends Controller
                         [
                             'label' => 'Продажи',
                             'backgroundColor' => '#F26202',
-                            'data' => [15000,50000,10000,30000]
+                            'data' => [rand(0, 40000),rand(0, 40000),rand(0, 40000),rand(0, 40000)]
+                        ],
+                        [
+                            'label' => 'Покупки',
+                            'backgroundColor' => '#16AB39',
+                            'data' => [rand(0, 40000),rand(0, 40000),rand(0, 40000),rand(0, 40000)]
                         ]
                     ]
             ];
