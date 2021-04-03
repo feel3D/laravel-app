@@ -25,6 +25,9 @@ Vue.component('prop-component', require('./components/PropComponent.vue').defaul
 Vue.component('ajax-component', require('./components/AjaxComponent.vue').default);
 Vue.component('chartline-component', require('./components/ChartlineComponent.vue').default);
 
+//
+Vue.component('my-component', require('./components/MyComponent').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

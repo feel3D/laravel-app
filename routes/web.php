@@ -48,6 +48,7 @@ Route::get('/form', [App\Http\Controllers\TestController::class, 'form']);
 Route::get('/set', [App\Http\Controllers\TestController::class, 'set']);
 Route::get('/get', [App\Http\Controllers\TestController::class, 'get']);
 Route::get('/model', [App\Http\Controllers\TestController::class, 'model']);
+Route::get('/my', [\App\Http\Controllers\TestController::class, 'test']);
 
 
 
@@ -58,6 +59,7 @@ Route::get('/start', [\App\Http\Controllers\StartController::class, 'index']);
 Route::get('/start/get-json', [\App\Http\Controllers\StartController::class, 'getJson']);
 //chart js
 Route::get('/start/data-chart', [\App\Http\Controllers\StartController::class, 'chartData']);
+
 
 
 

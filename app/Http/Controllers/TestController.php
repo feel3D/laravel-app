@@ -45,4 +45,9 @@ class TestController extends Controller
     {
         return Flight::all();
     }
+
+    public function test()
+    {
+        return view('my');
+    }
 }
