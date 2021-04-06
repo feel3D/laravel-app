@@ -16,13 +16,22 @@
                 <br>
                 <button @click="show = !show">Показать / Убрать</button>
                 <p v-if="show">I can be removed</p><br>
-                <p>{{ message | lovercase }}</p>
+                <p>{{ message | lovercase }}</p><br>
+
+<!--                <input type="text" v-model="vmodel">-->
+<!--                <p>{{ vmodel }}</p><br>-->
+
+
+                <added-hello :msg-from-my-component="message" @messChange="message=$event"></added-hello>
+                <br>
+
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Input from './AddComponent.vue'
 export default {
     data() {
         return {
@@ -35,6 +44,8 @@ export default {
             ],
             show: true,
             message: 'Hello, world!',
+            // vmodel: '',
+            fromAddComponent: '',
         }
     },
     methods: {
@@ -57,6 +68,9 @@ export default {
         lovercase (value) {
             return value.toLowerCase();
         }
+    },
+    components: {
+        'added-hello': Input
     }
 }
 </script>

@@ -5,4 +5,3 @@
 <my-component></my-component>
 
 @endsection
-
