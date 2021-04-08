@@ -24,6 +24,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('prop-component', require('./components/PropComponent.vue').default);
 Vue.component('ajax-component', require('./components/AjaxComponent.vue').default);
 Vue.component('chartline-component', require('./components/ChartlineComponent.vue').default);
+//realtime
+Vue.component('socket-component', require('./components/SocketComponent').default);
+
 
 //
 Vue.component('my-component', require('./components/MyComponent').default);
