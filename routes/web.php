@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Events\Message;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +18,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('chat');
 });
+
+Route::post('/messages', function (Request $request) {
+    Message::dispatch($request->input('body'));
+});
+
 
 Auth::routes();
 

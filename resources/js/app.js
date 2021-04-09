@@ -25,7 +25,8 @@ Vue.component('prop-component', require('./components/PropComponent.vue').defaul
 Vue.component('ajax-component', require('./components/AjaxComponent.vue').default);
 Vue.component('chartline-component', require('./components/ChartlineComponent.vue').default);
 //realtime
-Vue.component('socket-component', require('./components/SocketComponent').default);
+Vue.component('socket-component', require('./components/SocketComponent.vue').default);
+Vue.component('chat-component', require('./components/ChatComponent.vue').default);
 
 
 //
