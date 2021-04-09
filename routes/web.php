@@ -55,10 +55,12 @@ Route::get('/my', [\App\Http\Controllers\TestController::class, 'test']);
 
 //vue
 Route::get('/start', [\App\Http\Controllers\StartController::class, 'index']);
+Route::get('/start/socket-chart', [\App\Http\Controllers\StartController::class, 'newEvent']);
 //ajax
 Route::get('/start/get-json', [\App\Http\Controllers\StartController::class, 'getJson']);
 //chart js
 Route::get('/start/data-chart', [\App\Http\Controllers\StartController::class, 'chartData']);
+Route::get('/redis', [\App\Http\Controllers\StartController::class, 'redis']);
 
 
 
