@@ -18,13 +18,14 @@ use App\Events\Message;
 */
 
 Route::get('/', function () {
-    return view('chat');
+    return view('welcome');
 });
 
-Route::post('/messages', function (Request $request) {
-    Message::dispatch($request->input('body'));
-});
+//Route::post('/messages', function (Request $request) {
+//    Message::dispatch($request->input('body'));
+//});
 
+Route::post('/messages', [\App\Http\Controllers\RealtimeController::class, 'chat']);
 
 Auth::routes();
 
@@ -42,10 +43,10 @@ Route::get('/www/{id}', [App\Http\Controllers\TestController::class, 'param']);
 
 
 Route::get('user/{id}', function ($id) {
-    return 'User '.$id;
+    return 'User ' . $id;
 });
 Route::get('user/qwe/{id}', function ($id) {
-    return 'User '.$id;
+    return 'User ' . $id;
 });
 //Route::get('/user/{$id}', function ($id) {
 //    return 'User ID is: '.$id;
@@ -59,8 +60,6 @@ Route::get('/model', [App\Http\Controllers\TestController::class, 'model']);
 Route::get('/my', [\App\Http\Controllers\TestController::class, 'test']);
 
 
-
-
 //vue
 Route::get('/start', [\App\Http\Controllers\StartController::class, 'index']);
 Route::get('/start/socket-chart', [\App\Http\Controllers\StartController::class, 'newEvent']);
@@ -70,6 +69,9 @@ Route::get('/start/get-json', [\App\Http\Controllers\StartController::class, 'ge
 Route::get('/start/data-chart', [\App\Http\Controllers\StartController::class, 'chartData']);
 Route::get('/redis', [\App\Http\Controllers\StartController::class, 'redis']);
 
+Route::get('/chat', function () {
+    return view('chat');
+});
 
 
 

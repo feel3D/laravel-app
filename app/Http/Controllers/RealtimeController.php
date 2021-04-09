@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Events\Message;
 use App\Events\NewEvent;
 use Illuminate\Http\Request;
 
@@ -35,5 +36,11 @@ class RealtimeController extends Controller
         }
 
         return $result;
+    }
+
+    public function chat(Request $request)
+    {
+        $newEvent = new Message($request->input('body'));
+        event($newEvent);
     }
 }
